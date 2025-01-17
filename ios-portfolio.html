@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iOS Developer Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #0A84FF;
+            --secondary-color: #5E5CE6;
+            --accent-color: #FF375F;
+            --bg-color: #f5f5f7;
+            --card-bg: #ffffff;
+            --text-primary: #1d1d1f;
+            --text-secondary: #86868b;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 8rem 2rem;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            opacity: 0.9;
+            margin: 1rem 0;
+        }
+
+        .contact-section {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+            display: inline-block;
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: white;
+            text-decoration: none;
+            margin: 0.75rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+        }
+
+        .contact-text {
+            text-align: left;
+        }
+
+        .contact-label {
+            display: block;
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+
+        .bio-section {
+            background: var(--card-bg);
+            padding: 3rem;
+            margin: -4rem auto 2rem;
+            max-width: 800px;
+            border-radius: 1.5rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        .portfolio-item {
+            background: var(--card-bg);
+            border-radius: 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .portfolio-content {
+            padding: 2rem;
+        }
+
+        .role-badge {
+            background: var(--accent-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            display: inline-block;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .app-title {
+            font-size: 1.5rem;
+            margin: 0.5rem 0;
+            color: var(--text-primary);
+        }
+
+        .app-description {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tech-tag {
+            background: var(--bg-color);
+            padding: 0.5rem 1rem;
+            border-radius: 1rem;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .highlights {
+            margin-top: 1.5rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .highlight-item {
+            margin: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .highlight-item:before {
+            content: "•";
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>iOS Developer</h1>
+        <p class="subtitle">Crafting Exceptional Mobile Experiences</p>
+        <div class="contact-section">
+            <a href="mailto:ashishkumar6494@gmail.com" class="contact-item">
+                <span class="contact-icon">📧</span>
+                <div class="contact-text">
+                    <span class="contact-label">Email</span>
+                    ashishkumar6494@gmail.com
+                </div>
+            </a>
+            <a href="tel:+919901450052" class="contact-item">
+                <span class="contact-icon">📱</span>
+                <div class="contact-text">
+                    <span class="contact-label">Mobile</span>
+                    +91 9901 450052
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <div class="bio-section">
+        <h2>About Me</h2>
+        <p>As a dedicated iOS developer, I independently develop and maintain multiple production applications on the
+            App Store. My expertise spans the entire mobile development lifecycle, from initial concept and architecture
+            to deployment and ongoing maintenance.</p>
+        <p>In each project, I take full responsibility for:</p>
+        <ul>
+            <li>Complete application architecture and development</li>
+            <li>Implementation of complex features and integrations</li>
+            <li>Performance optimization and bug fixing</li>
+            <li>App Store deployment and version management</li>
+            <li>Continuous updates and iOS compatibility maintenance</li>
+        </ul>
+    </div>
+
+    <main class="container">
+        <div class="portfolio-grid">
+            <!-- Work Life Play -->
+            <a href="https://apps.apple.com/au/app/work-life-play/id1086678242" class="portfolio-item">
+                <div class="portfolio-content">
+                    <span class="role-badge">Sole Developer</span>
+                    <h3 class="app-title">Work Life Play</h3>
+                    <p class="app-description">WLP app offers super savings on everyday items, and a giant-sized dose of
+                        fun and entertainment for the whole family. As a member you will receive 1000's of benefits and
+                        special offers from all around Australia and even more overseas. Because there are so many
+                        suppliers there are different ways to access / redeem each benefit.</p>
+                    <div class="highlights">
+                        <div class="highlight-item">Customized experience based on client</div>
+                        <div class="highlight-item">Real-time notification system</div>
+                        <div class="highlight-item">Reward Points redemption</div>
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Swift</span>
+                        <span class="tech-tag">UIKit</span>
+                        <span class="tech-tag">Core Data</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- John McGrath Auto Group -->
+            <a href="https://apps.apple.com/au/app/john-mcgrath-auto-group-app/id6448843939" class="portfolio-item">
+                <div class="portfolio-content">
+                    <span class="role-badge">Sole Developer</span>
+                    <h3 class="app-title">John McGrath Auto Group</h3>
+                    <p class="app-description">John McGrath app offers 4,500+ top brands for discounts and cashback on
+                        groceries, fashion, home & lifestyle, travel, electronics, kids, pets and more.</p>
+                    <div class="highlights">
+                        <div class="highlight-item">Offers and discounts over various brands</div>
+                        <div class="highlight-item">Secure payment gateway</div>
+                        <div class="highlight-item">Vehicle listings and booking</div>
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Swift</span>
+                        <span class="tech-tag">UIKit</span>
+                        <span class="tech-tag">MapKit</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Ignite HQ -->
+            <a href="https://apps.apple.com/au/app/ignite-hq/id1581078664" class="portfolio-item">
+                <div class="portfolio-content">
+                    <span class="role-badge">Sole Developer</span>
+                    <h3 class="app-title">Ignite HQ</h3>
+                    <p class="app-description">This App is for Ignite HQ members who have access to this program. Enjoy
+                        the benefits from over 4,000 brand partners and functionality which includes:<br>- “What’s
+                        around me” – locate local shops and cafes in your area<br>- eGift cards and eMovie tickets – buy
+                        online and have them delivered instantly to your email</p>
+                    <div class="highlights">
+                        <div class="highlight-item">Real-time collaboration</div>
+                        <div class="highlight-item">Secure file sharing</div>
+                        <div class="highlight-item">Custom notification system</div>
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Swift</span>
+                        <span class="tech-tag">Firebase</span>
+                        <span class="tech-tag">Push Notifications</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Simply Rewards -->
+            <a href="https://apps.apple.com/au/app/simply-rewards/id1407139543" class="portfolio-item">
+                <div class="portfolio-content">
+                    <span class="role-badge">Sole Developer</span>
+                    <h3 class="app-title">Simply Rewards</h3>
+                    <p class="app-description">A sophisticated loyalty program application with automated reward
+                        tracking.</p>
+                    <div class="highlights">
+                        <div class="highlight-item">Points calculation engine</div>
+                        <div class="highlight-item">QR code scanning</div>
+                        <div class="highlight-item">Offline synchronization</div>
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Swift</span>
+                        <span class="tech-tag">Core Data</span>
+                        <span class="tech-tag">REST API</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Referral Advantage -->
+            <a href="https://apps.apple.com/au/app/referral-advantage-australia/id1121542132" class="portfolio-item">
+                <div class="portfolio-content">
+                    <span class="role-badge">Sole Developer</span>
+                    <h3 class="app-title">Referral Advantage Australia</h3>
+                    <p class="app-description">Referral Advantage Australia offers super savings on everyday items and a
+                        giant-sized dose of fun and entertainment for the whole family. As a member, you will receive
+                        1000's of benefits and special offers from all around Australia and even more overseas. Because
+                        there are so many suppliers there are different ways to access/redeem​ each benefit.</p>
+                    <div class="highlights">
+                        <div class="highlight-item">Referral tracking system</div>
+                        <div class="highlight-item">Multiple offers including cashback and discount</div>
+                        <div class="highlight-item">Location based offer recomendation</div>
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Swift</span>
+                        <span class="tech-tag">Networking</span>
+                        <span class="tech-tag">Analytics</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- LSH Auto -->
+            <a href="https://apps.apple.com/au/app/lsh-auto/id1565494741" class="portfolio-item">
+                <div class="portfolio-content">
+                    <span class="role-badge">Sole Developer</span>
+                    <h3 class="app-title">LSH Auto</h3>
+                    <p class="app-description">A comprehensive automotive services platform with e-commerce
+                        capabilities.</p>
+                    <div class="highlights">
+                        <div class="highlight-item">E-commerce functionality</div>
+                        <div class="highlight-item">Digital wallet integration</div>
+                        <div class="highlight-item">Service booking system</div>
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Swift</span>
+                        <span class="tech-tag">UIKit</span>
+                        <span class="tech-tag">E-commerce</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </main>
+</body>
+
+</html>
